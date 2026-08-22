@@ -1,71 +1,57 @@
-import Image from "next/image";
 import styles from "./page.module.css";
 
 export default function Home() {
   return (
     <div className={styles.page}>
+
+      <header className={styles.header}>
+        <h1>Meu site</h1>
+        <p>Estou aprendendo HTML, React e CSS</p>
+      </header>
+
       <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>
-            Olá, tudo bem?
-            <br />
-            To get started, edit the{" "}
-            <code className={styles.code}>page.js</code> file.
-          </h1>
+
+        <section className={styles.card}>
+          <h2>Olá, tudo bem?</h2>
+
           <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
+            Este é um site simples para eu aprender como o CSS funciona.
           </p>
-        </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+
+          <button className={styles.button}>
+            Clique aqui
+          </button>
+        </section>
+
+        <section className={styles.card}>
+          <h2>Escolha uma opção</h2>
+
+          <select className={styles.select}>
+            <option>HTML</option>
+            <option>CSS</option>
+            <option>JavaScript</option>
+            <option>React</option>
+            <option>Next.js</option>
+          </select>
+        </section>
+
+        <section className={styles.card}>
+          <h2>Minha lista</h2>
+
+          <ul>
+            <li>Aprender HTML</li>
+            <li>Aprender CSS</li>
+            <li>Aprender JavaScript</li>
+            <li>Aprender React</li>
+          </ul>
+        </section>
+
       </main>
+
+      <footer className={styles.footer}>
+        <p>Meu primeiro projeto</p>
+      </footer>
+
     </div>
   );
 }
