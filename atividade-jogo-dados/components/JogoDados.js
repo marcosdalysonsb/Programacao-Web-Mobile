@@ -80,8 +80,12 @@ if (rodada === 5) {
 
   <p>Rodada {rodada} / 5</p>
 
-  <p>
-    Jogador 1: {vitoriasJogador1} | Jogador 2: {vitoriasJogador2}
+  <p className="placar">
+    <span className="jogador">Jogador 1:</span>
+    <span className="pontos">{vitoriasJogador1}</span>
+    <span className="divisor">|</span>
+    <span className="jogador">Jogador 2:</span>
+    <span className="pontos">{vitoriasJogador2}</span>
   </p>
 
   <div>
